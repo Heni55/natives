@@ -6,7 +6,7 @@ aliases: ["0x15803FEC3B9A872B"]
 
 ```c
 // 0x15803FEC3B9A872B
-Any _DRAW_FRONTEND_ALERT(char* labelTitle, char* labelMsg, int p2, int p3, char* labelMsg2, int p5, int p6, int p7, char* p8, char* p9, BOOL background, Any p11);
+Any _DRAW_FRONTEND_ALERT(char* labelTitle, char* labelMsg, int p2, int p3, char* labelMsg2, int p5, int p6, int p7, char* p8, char* p9, BOOL background, int errorCode);
 ```
 
 instructionalKey enum list:
@@ -57,6 +57,11 @@ Alt = {
 
 **Result of the example code:** [https://i.imgur.com/TvmNF4k.png](https://i.imgur.com/TvmNF4k.png)
 
+```
+NativeDB Parameter 5: BOOL p5
+NativeDB Return Type: void
+```
+
 ## Parameters
 * **labelTitle**: Label of the alert's title. 
 * **labelMsg**: Label of the alert's message.
@@ -69,7 +74,7 @@ Alt = {
 * **p8**: unknown label
 * **p9**: unknown label
 * **background**: Set to anything other than 0 or false (even any string) and it will draw a background. Setting it to 0 or false will draw no background.
-* **p11**: unknown value default false, it shows an error code at the bottom left
+* **errorCode**: Error code, shown at the bottom left if set to value other than 0.
 
 ## Examples
 ```lua
